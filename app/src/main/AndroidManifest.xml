@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =============================================================
+     Project: Pavlova T.V.
+     Файл: AndroidManifest.xml
+     Назначение: описание приложения для Android.
+     ============================================================= -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Разрешение для доступа в интернет (нужно для TWA) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Jurist78">
+
+        <meta-data
+            android:name="android.support.customtabs.trusted.ADDITIONAL_TRUSTED_ORIGINS"
+            android:resource="@array/additional_trusted_origins" />
+
+        <!-- =====================================================
+             LauncherActivity из android-browser-helper.
+             Это точка входа приложения. Она открывает TWA.
+             ===================================================== -->
+        <activity
+            android:name=".OfflineFirstTWALauncherActivity"
+            android:theme="@style/Theme.Jurist78"
+            android:exported="true">
+
+            <!-- Этот intent-filter делает Activity точкой входа (иконка в лаунчере) -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- URL, который открывает TWA при запуске -->
+            <meta-data
+                android:name="android.support.customtabs.trusted.DEFAULT_URL"
+                android:value="https://juristspb78.ru" />
+
+            <!-- =================================================
+                 Этот intent-filter с autoVerify="true" просит Android
+                 проверить, что ты владелец домена (через assetlinks.json).
+                 Если проверка пройдёт — полноэкранный режим.
+                 Если нет — Custom Tab (с адресной строкой).
+                 ================================================= -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="juristspb78.ru" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

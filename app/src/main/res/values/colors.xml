@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- =============================================================
+         Цвета из дизайн-системы PWA (design.css).
+         ============================================================= -->
+    <!-- Primary (Mint) -->
+    <color name="mint">#3d9c8c</color>
+    <color name="mint_dark">#2d8c7c</color>
+
+    <!-- Secondary (Navy) -->
+    <color name="navy">#2c4a5e</color>
+
+    <!-- Базовые -->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!-- =============================================================
+         Цвет фона для adaptive icon.
+         Именно этот цвет подставляется в ic_launcher.xml:
+         <background android:drawable="@color/ic_launcher_background"/>
+         ============================================================= -->
+    <color name="ic_launcher_background">#F7F9F8</color>
+</resources>

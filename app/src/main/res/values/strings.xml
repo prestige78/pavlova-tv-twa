@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Название приложения (отображается на иконке в лаунчере и в RuStore) -->
+    <string name="app_name">Pavlova T.V.</string>
+
+    <!-- Дополнительные доверенные origin для TWA.
+         Нужно, потому что есть редирект с www на без-www.
+         Без этого TWA потеряет полноэкранный режим при переходе на www. -->
+    <string-array name="additional_trusted_origins">
+        <item>https://www.juristspb78.ru</item>
+    </string-array>
+</resources>

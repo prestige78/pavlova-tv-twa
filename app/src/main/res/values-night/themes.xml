@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- =============================================================
+         Тема приложения (тёмная).
+         Автоматически применяется в тёмном режиме Android.
+         ============================================================= -->
+    <style name="Theme.Jurist78" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Основной цвет (Mint из PWA) -->
+        <item name="colorPrimary">#3d9c8c</item>
+        <!-- Тёмный вариант Mint -->
+        <item name="colorPrimaryVariant">#2d8c7c</item>
+        <!-- Цвет текста на основном фоне -->
+        <item name="colorOnPrimary">#ffffff</item>
+        <!-- Вторичный цвет (Navy из PWA) -->
+        <item name="colorSecondary">#2c4a5e</item>
+        <!-- Цвет текста на вторичном фоне -->
+        <item name="colorOnSecondary">#ffffff</item>
+        <!-- Цвет статус-бара (тёмный фон из PWA) -->
+        <item name="android:statusBarColor">#0e161a</item>
+    </style>
+</resources>
